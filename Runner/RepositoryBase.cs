@@ -33,4 +33,17 @@ public abstract class DapperExRepositoryBase<TEntity> where TEntity : class
         }
     }
 }
+
+public class DapperConnection
+{
+    public IDbConnection DapperCon {
+        get
+        {
+            return new SqlConnection(ConfigurationManager.ConnectionStrings["Default"].ToString());
+
+        }
+    }
+}
+
+
 }
